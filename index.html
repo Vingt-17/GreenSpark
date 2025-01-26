@@ -3,32 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Spark</title>
-    <link rel="stylesheet" href="styles.css"
+    <title>S-Kotch</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Barre supérieure pour "join us" et le choix de langue -->
+    <div class="top-bar">
+        <div class="top-bar__container">
+            <!-- Bouton "join us" -->
+            <a href="/" class="button" id="join-us">Join us</a>
+            <!-- Sélecteur de langue -->
+            <select id="language-select">
+                <option value="ar" selected>Darija</option>
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Barre de navigation principale -->
     <nav class="navbar">
         <div class="navbar__container">
-        <a href="/" id="navbar__logo">GreenSpark</a>
-        <div class="navbar__toggle" id="mobile-menu"></div>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+            <!-- Logo du site -->
+            <a href="/" id="navbar__logo">S-Kotch</a>
+
+            <!-- Menu de navigation -->
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links" id="menu-home">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/Courses.html" class="navbar__links" id="menu-courses">Courses</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/Skills.html" class="navbar__links" id="menu-skills">Skills</a>
+                </li>
+            </ul>
         </div>
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="/" class="navbar__links">home</a>
-            </li>
-            <li class="navbar__item">
-                <a href="/Couses.html" class="navbar__links">Courses</a>
-            </li>
-            <li class="navbar__item">
-                <a href="/Skills.html" class="navbar__links">Skills</a>
-            </li>
-            <li class="navbar__btn">
-                <a href="/" class="button">join us</a>
-            </li>
-        </ul>
     </nav>
+
+    <!-- Contenu principal modifiable -->
+    <div class="content">
+        <h1 id="content-title">مرحبا بكم في S-Kotch</h1>
+        <p id="content-description">هذه منصة تعليمية عبر الإنترنت تقدم دورات شاملة ومهارات عملية.</p>
+    </div>
+
+    <!-- Script pour gérer les langues -->
+    <script src="app.js"></script>
 </body>
 </html>

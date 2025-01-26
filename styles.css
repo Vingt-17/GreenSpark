@@ -1,103 +1,133 @@
-*{
+/* Réinitialisation globale */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
 }
 
-.navbar { 
-    background: #131313;
-    height: 80px;
+/* Barre supérieure (top-bar) */
+.top-bar {
+    background: #f9f9f9; /* Fond gris clair pour la distinction */
+    height: 50px; /* Hauteur de la barre supérieure */
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+    justify-content: flex-end; /* Aligne les éléments à droite */
+    border-bottom: 1px solid #ddd; /* Ligne fine séparant la barre */
 }
 
-.navbar__container{
+/* Conteneur interne de la barre supérieure */
+.top-bar__container {
     display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
+    align-items: center;
+    gap: 10px; /* Espacement entre le bouton et le sélecteur */
+    padding-right: 20px; /* Ajoute un espace à droite pour plus d'esthétique */
+}
+
+/* Bouton "join us" dans la barre supérieure */
+.button {
+    text-decoration: none;
+    padding: 6px 16px; /* Espacement interne pour un bouton équilibré */
+    border: 2px solid #0056d2; /* Bordure bleue */
+    border-radius: 20px; /* Coins arrondis */
+    background: transparent; /* Fond transparent par défaut */
+    color: #0056d2; /* Texte bleu */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Effets fluides sur le hover */
+    height: 34px; /* Ajusté pour la hauteur de la barre supérieure */
+    display: flex;
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
+}
+
+.button:hover {
+    background: #0056d2; /* Fond bleu au survol */
+    color: #fff; /* Texte blanc au survol */
+}
+
+/* Sélecteur de langue */
+#language-select {
+    height: 34px; /* Ajusté pour la hauteur de la barre supérieure */
+    padding: 5px 10px; /* Espacement interne */
+    font-size: 0.9rem; /* Taille de texte légèrement réduite */
+    border: 1px solid #ddd; /* Bordure fine et grise */
+    border-radius: 4px; /* Coins arrondis */
+    background: #fff; /* Fond blanc */
+    color: #333; /* Texte gris foncé */
+    cursor: pointer; /* Curseur cliquable */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Effets fluides */
+}
+
+#language-select:hover,
+#language-select:focus {
+    border-color: #0056d2; /* Bordure bleue au survol et au focus */
+    box-shadow: 0 0 5px rgba(0, 86, 210, 0.5); /* Ombre légère */
+}
+
+/* Barre de navigation principale (navbar) */
+.navbar {
+    background: #fff; /* Fond blanc */
+    height: 64px; /* Hauteur de la barre principale */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Équilibre entre les groupes */
+    border-bottom: 1px solid #ddd; /* Ligne fine séparant la barre */
+    padding: 0 20px;
+}
+
+/* Conteneur interne */
+.navbar__container {
+    display: flex;
+    align-items: center;
     width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
+    justify-content: space-between;
 }
 
-#navbar__logo{
-background-color:aquamarine;
-background-image: linear-gradient(to top, #ff0844 0%,#ffb199 100%);
-background-size: 100%;
--webkit-background-clip: text;
--moz-background-clip: text;
--webkit-text-fill-color: transparent;
--moz-text-fill-color: transparent;
-display: flex;
-align-items: center;
-cursor: pointer;
-text-decoration: none;
-font-size: 2rem;
-}*
-
-.fa-gem{
-
-    margin-right: 0.5rem;
+/* Logo */
+#navbar__logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0056d2;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.navbar__menu{
+/* Menu de navigation */
+.navbar__menu {
     display: flex;
-    align-items: center;
-    list-style: none;
+    list-style: none; /* Supprime les puces des listes */
+    gap: 20px; /* Espacement uniforme entre les liens */
+    margin: 0;
+}
+
+/* Liens du menu */
+.navbar__links {
+    color: #333; /* Texte gris foncé */
+    text-decoration: none; /* Supprime le soulignement */
+    padding: 6px 10px; /* Espacement interne pour rendre les liens cliquables */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    transition: background 0.3s ease, color 0.3s ease; /* Ajoute des effets fluides */
+}
+
+/* Survol des liens */
+.navbar__links:hover {
+    background: #f0f0f0; /* Fond gris clair au survol */
+    color: #0056d2; /* Texte bleu au survol */
+}
+
+/* Contenu principal */
+.content {
+    padding: 20px;
     text-align: center;
 }
 
-.navbar__item{
-    height: 80px;
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #0056d2;
 }
 
-.navbar__links{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-}
-
-.navbar__btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width: 100%;
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #ff0844;
-    color: #fff ;
-}
-
-.button:hover{
-background: #ffb199;
-transition: all 0.3s ease;
-}
-
-.navbar__links:hover{
-background: #ffb199;
-transition: all 0.3s ease;
+.content p {
+    font-size: 1rem;
+    color: #333;
 }
