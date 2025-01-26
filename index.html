@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S-Kotch</title>
-    <!-- Lien vers le fichier CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barre supérieure pour "join us" et le choix de langue -->
+    <!-- Barre supérieure -->
     <div class="top-bar">
         <div class="top-bar__container">
-            <!-- Bouton "join us" -->
-            <a href="/" class="button" id="join-us">Join us</a>
-            <!-- Sélecteur de langue -->
+            <a href="/" class="button">انضم إلينا</a>
             <select id="language-select">
                 <option value="ar" selected>Darija</option>
                 <option value="fr">Français</option>
@@ -25,31 +22,67 @@
     <!-- Barre de navigation principale -->
     <nav class="navbar">
         <div class="navbar__container">
-            <!-- Logo du site -->
             <a href="/" id="navbar__logo">S-Kotch</a>
-
-            <!-- Menu de navigation -->
             <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links" id="menu-home">Home</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/Courses.html" class="navbar__links" id="menu-courses">Courses</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/Skills.html" class="navbar__links" id="menu-skills">Skills</a>
-                </li>
+                <li><a href="#baccalaureat" class="navbar__links">Baccalauréat</a></li>
+                <li><a href="#higher-education" class="navbar__links">Études Supérieures</a></li>
+                <li><a href="#skills" class="navbar__links">Compétences</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Contenu principal modifiable -->
-    <div class="content">
-        <h1 id="content-title">مرحبا بكم في S-Kotch</h1>
-        <p id="content-description">هذه منصة تعليمية عبر الإنترنت تقدم دورات شاملة ومهارات عملية.</p>
+    <!-- Deuxième barre -->
+    <div class="secondary-bar">
+        <div class="secondary-bar__container">
+            <ul class="secondary-bar__menu">
+                <li><a href="#about-us" class="secondary-bar__links">À propos</a></li>
+                <li><a href="#vision" class="secondary-bar__links">Vision</a></li>
+                <li><a href="#mission" class="secondary-bar__links">Mission</a></li>
+                <li><a href="#values" class="secondary-bar__links">Valeurs</a></li>
+                <li><a href="#resources" class="secondary-bar__links">Ressources</a></li>
+                <li><a href="#contact" class="secondary-bar__links">Contact</a></li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Script pour gérer les langues -->
+    <!-- Contenu principal -->
+    <main class="content">
+        <section id="about-us">
+            <h1>Qui sommes-nous ?</h1>
+            <p>S-Kotch est une plateforme dédiée à l'accompagnement des étudiants marocains dans leur parcours académique et professionnel.</p>
+        </section>
+
+        <section id="vision">
+            <h2>Notre vision</h2>
+            <p>Inspirer les étudiants à atteindre leur plein potentiel en leur fournissant des outils pratiques et des connaissances solides.</p>
+        </section>
+
+        <section id="mission">
+            <h2>Notre mission</h2>
+            <p>Offrir un accompagnement personnalisé à chaque étape de l'éducation, du baccalauréat à la carrière professionnelle.</p>
+        </section>
+
+        <section id="values">
+            <h2>Nos valeurs</h2>
+            <p>Excellence, accessibilité, et innovation sont au cœur de tout ce que nous entreprenons.</p>
+        </section>
+
+        <section id="resources">
+            <h2>Nos ressources</h2>
+            <p>Vidéos, cours en PDF, exercices interactifs et ateliers en ligne sont à votre disposition pour faciliter l’apprentissage.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Nous contacter</h2>
+            <p>Pour toute demande ou suggestion, contactez-nous par e-mail : <a href="mailto:support@skotch.com">support@skotch.com</a>.</p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <p>&copy; 2023 S-Kotch. Tous droits réservés.</p>
+    </footer>
+
     <script src="app.js"></script>
 </body>
 </html>

@@ -6,128 +6,173 @@
     font-family: Arial, sans-serif;
 }
 
-/* Barre supérieure (top-bar) */
+/* Barre supérieure */
 .top-bar {
-    background: #f9f9f9; /* Fond gris clair pour la distinction */
-    height: 50px; /* Hauteur de la barre supérieure */
+    background: #f9f9f9;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Aligne les éléments à droite */
-    border-bottom: 1px solid #ddd; /* Ligne fine séparant la barre */
+    justify-content: flex-end;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Conteneur interne de la barre supérieure */
 .top-bar__container {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espacement entre le bouton et le sélecteur */
-    padding-right: 20px; /* Ajoute un espace à droite pour plus d'esthétique */
+    gap: 10px;
+    padding-right: 20px;
 }
 
-/* Bouton "join us" dans la barre supérieure */
 .button {
     text-decoration: none;
-    padding: 6px 16px; /* Espacement interne pour un bouton équilibré */
-    border: 2px solid #0056d2; /* Bordure bleue */
-    border-radius: 20px; /* Coins arrondis */
-    background: transparent; /* Fond transparent par défaut */
-    color: #0056d2; /* Texte bleu */
+    padding: 6px 16px;
+    border: 2px solid #0056d2;
+    border-radius: 20px;
+    background: #0056d2;
+    color: #fff;
     font-weight: bold;
-    transition: all 0.3s ease; /* Effets fluides sur le hover */
-    height: 34px; /* Ajusté pour la hauteur de la barre supérieure */
     display: flex;
-    align-items: center; /* Centre le texte verticalement */
-    justify-content: center; /* Centre le texte horizontalement */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button:hover {
-    background: #0056d2; /* Fond bleu au survol */
-    color: #fff; /* Texte blanc au survol */
+    background: #003a70;
+    color: #ffffff;
 }
 
-/* Sélecteur de langue */
 #language-select {
-    height: 34px; /* Ajusté pour la hauteur de la barre supérieure */
-    padding: 5px 10px; /* Espacement interne */
-    font-size: 0.9rem; /* Taille de texte légèrement réduite */
-    border: 1px solid #ddd; /* Bordure fine et grise */
-    border-radius: 4px; /* Coins arrondis */
-    background: #fff; /* Fond blanc */
-    color: #333; /* Texte gris foncé */
-    cursor: pointer; /* Curseur cliquable */
-    transition: border 0.3s ease, box-shadow 0.3s ease; /* Effets fluides */
+    height: 34px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-#language-select:hover,
-#language-select:focus {
-    border-color: #0056d2; /* Bordure bleue au survol et au focus */
-    box-shadow: 0 0 5px rgba(0, 86, 210, 0.5); /* Ombre légère */
+#language-select:hover {
+    background: #f0f0f0;
+    border-color: #0056d2;
 }
 
-/* Barre de navigation principale (navbar) */
+/* Barre de navigation principale */
 .navbar {
-    background: #fff; /* Fond blanc */
-    height: 64px; /* Hauteur de la barre principale */
+    background: #fff;
+    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Équilibre entre les groupes */
-    border-bottom: 1px solid #ddd; /* Ligne fine séparant la barre */
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
     padding: 0 20px;
 }
 
-/* Conteneur interne */
 .navbar__container {
     display: flex;
     align-items: center;
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
 }
 
-/* Logo */
 #navbar__logo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #0056d2;
     text-decoration: none;
-    cursor: pointer;
 }
 
-/* Menu de navigation */
 .navbar__menu {
     display: flex;
-    list-style: none; /* Supprime les puces des listes */
-    gap: 20px; /* Espacement uniforme entre les liens */
-    margin: 0;
+    list-style: none;
+    gap: 30px;
 }
 
-/* Liens du menu */
 .navbar__links {
-    color: #333; /* Texte gris foncé */
-    text-decoration: none; /* Supprime le soulignement */
-    padding: 6px 10px; /* Espacement interne pour rendre les liens cliquables */
-    border-radius: 4px; /* Coins légèrement arrondis */
-    transition: background 0.3s ease, color 0.3s ease; /* Ajoute des effets fluides */
+    color: #0056d2;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Survol des liens */
 .navbar__links:hover {
-    background: #f0f0f0; /* Fond gris clair au survol */
-    color: #0056d2; /* Texte bleu au survol */
+    background: #e0e0e0;
+    color: #003a70;
+}
+
+/* Deuxième barre */
+.secondary-bar {
+    background: #f9f9f9;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.secondary-bar__container {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.secondary-bar__menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.secondary-bar__links {
+    color: #0056d2;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-bar__links:hover {
+    background: #e0e0e0;
+    color: #003a70;
 }
 
 /* Contenu principal */
 .content {
     padding: 20px;
-    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.6;
 }
 
 .content h1 {
     font-size: 2rem;
-    margin-bottom: 10px;
     color: #0056d2;
+    margin-bottom: 20px;
 }
 
 .content p {
     font-size: 1rem;
     color: #333;
+    margin-bottom: 20px;
+}
+
+/* Pied de page */
+.footer {
+    background: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
 }

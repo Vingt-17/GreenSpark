@@ -1,58 +1,71 @@
-// Obtenez les références des éléments à traduire
-const menuHome = document.getElementById('menu-home');
-const menuCourses = document.getElementById('menu-courses');
-const menuSkills = document.getElementById('menu-skills');
-const joinUs = document.getElementById('join-us');
-const contentTitle = document.getElementById('content-title');
-const contentDescription = document.getElementById('content-description');
-
-// Définir les traductions pour chaque langue
 const translations = {
     ar: {
-        home: "الرئيسية",
-        courses: "الدورات",
-        skills: "المهارات",
-        joinUs: "انضم إلينا",
-        title: "مرحبا بكم في S-Kotch",
-        description: "هذه منصة تعليمية عبر الإنترنت تقدم دورات شاملة ومهارات عملية."
+        aboutTitle: "من نحن؟",
+        aboutContent: "S-Kotch هو منصة تهدف إلى دعم الطلاب المغاربة في مسارهم الدراسي والمهني...",
+        visionTitle: "رؤيتنا",
+        visionContent: "إلهام الطلاب لتحقيق إمكاناتهم الكاملة...",
+        missionTitle: "مهمتنا",
+        missionContent: "تقديم الدعم في جميع مراحل التعليم...",
+        valuesTitle: "قيمنا",
+        valuesContent: "التميز والابتكار...",
+        resourcesTitle: "مواردنا",
+        resourcesContent: "نوفر دروس فيديو وPDF...",
+        contactTitle: "اتصل بنا",
+        contactContent: "لأي استفسارات، تواصل معنا عبر البريد الإلكتروني..."
     },
     fr: {
-        home: "Accueil",
-        courses: "Cours",
-        skills: "Compétences",
-        joinUs: "Rejoignez-nous",
-        title: "Bienvenue sur S-Kotch",
-        description: "Ceci est une plateforme éducative en ligne offrant des cours complets et des compétences pratiques."
+        aboutTitle: "Qui sommes-nous ?",
+        aboutContent: "S-Kotch est une plateforme dédiée à l'accompagnement...",
+        visionTitle: "Notre vision",
+        visionContent: "Inspirer les étudiants à atteindre leur plein potentiel...",
+        missionTitle: "Notre mission",
+        missionContent: "Offrir un accompagnement personnalisé...",
+        valuesTitle: "Nos valeurs",
+        valuesContent: "Excellence, accessibilité, innovation...",
+        resourcesTitle: "Nos ressources",
+        resourcesContent: "Vidéos, PDF, exercices...",
+        contactTitle: "Nous contacter",
+        contactContent: "Pour toute demande, contactez-nous par e-mail..."
     },
     en: {
-        home: "Home",
-        courses: "Courses",
-        skills: "Skills",
-        joinUs: "Join us",
-        title: "Welcome to S-Kotch",
-        description: "This is an online educational platform offering comprehensive courses and practical skills."
+        aboutTitle: "Who are we?",
+        aboutContent: "S-Kotch is a platform dedicated to supporting students...",
+        visionTitle: "Our Vision",
+        visionContent: "Inspiring students to achieve their full potential...",
+        missionTitle: "Our Mission",
+        missionContent: "Providing support at every stage of education...",
+        valuesTitle: "Our Values",
+        valuesContent: "Excellence, accessibility, innovation...",
+        resourcesTitle: "Our Resources",
+        resourcesContent: "Videos, PDFs, exercises...",
+        contactTitle: "Contact Us",
+        contactContent: "For any inquiries, contact us via email..."
     }
 };
 
-// Fonction pour changer la langue
-function changeLanguage(language) {
+function updateContent(language) {
     const translation = translations[language];
-    if (translation) {
-        menuHome.textContent = translation.home;
-        menuCourses.textContent = translation.courses;
-        menuSkills.textContent = translation.skills;
-        joinUs.textContent = translation.joinUs;
-        contentTitle.textContent = translation.title;
-        contentDescription.textContent = translation.description;
-    }
+    document.querySelector("#about-us h1").textContent = translation.aboutTitle;
+    document.querySelector("#about-us p").textContent = translation.aboutContent;
+
+    document.querySelector("#vision h2").textContent = translation.visionTitle;
+    document.querySelector("#vision p").textContent = translation.visionContent;
+
+    document.querySelector("#mission h2").textContent = translation.missionTitle;
+    document.querySelector("#mission p").textContent = translation.missionContent;
+
+    document.querySelector("#values h2").textContent = translation.valuesTitle;
+    document.querySelector("#values p").textContent = translation.valuesContent;
+
+    document.querySelector("#resources h2").textContent = translation.resourcesTitle;
+    document.querySelector("#resources p").textContent = translation.resourcesContent;
+
+    document.querySelector("#contact h2").textContent = translation.contactTitle;
+    document.querySelector("#contact p").textContent = translation.contactContent;
 }
 
-// Écouteur d'événement sur le sélecteur de langue
-const languageSelect = document.getElementById('language-select');
-languageSelect.addEventListener('change', (event) => {
-    const selectedLanguage = event.target.value;
-    changeLanguage(selectedLanguage);
+document.getElementById("language-select").addEventListener("change", (e) => {
+    updateContent(e.target.value);
 });
 
-// Charger la langue par défaut (Darija)
-changeLanguage('ar');
+updateContent("ar");
